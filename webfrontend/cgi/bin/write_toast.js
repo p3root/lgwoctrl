@@ -22,3 +22,14 @@
 * SOFTWARE.
 *
 */
+
+var lgtv = require('./node_modules/lgtv2/index')({
+    url: 'ws://' + process.argv[2] + ':3000',
+    keyFile: '/opt/loxberry/webfrontend/cgi/plugins/lgwoctrl/clientKey'
+});
+
+lgtv.on('connect', function () {
+	 lgtv.request('ssap://system.notifications/createToast', {message: process.argv[3]}, function (err, res) {	
+		process.exit();
+    });
+});

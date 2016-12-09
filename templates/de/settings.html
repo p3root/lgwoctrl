@@ -1,0 +1,43 @@
+									<form method="post" data-ajax="false" name="main_form" id="main_form" action="./index.cgi">
+										<input type="hidden" name="saveformdata" value="1">
+											<div class="form-group">
+												<table class="formtable" border="0" width="100%" cellpadding="10">
+													<tr>
+														<td width="25%">
+															<label id="labelapikey">IP Addresse:</label>
+														</td>
+														<td width="50%">
+															<input id="lgtvip" name="lgtvip" type="text" class="textfield" value="<!--$lgtvip-->"
+														</td>
+														<td width="5%" valign="middle">
+															&nbsp;
+														</td>
+													</tr>
+													<tr>
+														<td>
+															Paring
+														</td>
+														<td>
+															<a id="Pair" data-role="button" data-inline="true" data-mini="true" href="#"
+															data-role="button" id="btnlistnetworks" data-inline="true" data-mini="true"
+															onClick="window.open('/admin/plugins/<!--$psubfolder-->/pair.cgi',
+															'NewWindow2','scrollbars=true,toolbar=no,location=no,directories=no,status=no,menubar=no,copyhistory=no,width=900,height=600')">
+															<font size="-1">Pair TV</font>
+															</a>
+														</td>
+													</tr>
+											</table>
+										</div>
+									<p>
+										&nbsp;
+									</p>
+									<p>
+										<center>
+											<a id="btncancel" data-role="button" data-inline="true" data-mini="true" data-icon="delete" href="/admin/index.cgi">Abbrechen</a>
+												<button type="submit" form="main_form" id="btnsubmit" data-role="button" data-inline="true" data-mini="true" data-icon="check">Speichern</button>
+										</center>
+									</form>
+									</p>
+                  <script>
+                  
+                  </script>

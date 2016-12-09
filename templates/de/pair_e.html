@@ -1,0 +1,62 @@
+<html>
+<head>
+  <title><!--$template_title--></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+  <link rel="stylesheet" href="/system/scripts/jquery/themes/main/loxberry.min.css">
+</head>
+<body>
+
+<!-- page -->
+<div data-role="page" id="main">
+
+  <!-- ************************************************************************************** -->
+
+  <!-- content -->
+  <div role="main" class="ui-content">
+    <div class="ui-body ui-body-a ui-corner-all loxberry-logo">
+
+    <!-- text -->
+    <div style="margin: 5%">
+
+      <p>
+      <center>
+     
+
+		<h1>Paring to LG TV Failed!</h1>
+
+		<form method="post" data-ajax="false" name="pair_form" id="pair_form" action="./pair.cgi">
+		  <table width="100%" border=0>
+			<tr>
+			  <td width="80%">
+				<div>Mit dem Klick auf Start wird der Pairing Vorgang mit dem LG WebOS TV <!--$lgtvip--> gestartet. Es scheint eine Meldung am TV die bestätigt werden muss.</div>
+				<input id="startPair" name="startPair" type="hidden">
+			  </td>
+			  <td width="20%">
+				<button type="submit" form="pair_form" id="btnsubmit" data-role="button" data-inline="true" data-mini="true" data-icon="check">Start</button>
+			  </td>
+			</tr>
+		  </table>
+		</form>
+
+     
+      </center>
+      </p>
+
+    </div>
+    <!-- /text -->
+
+    </div>
+
+  </div>
+  <!-- /content -->
+
+  <!-- ************************************************************************************** -->
+
+</div>
+<!-- /page -->
+
+<div id="lang" style="display: none"><!--$lang--></div>
+<div id='overlay' style="display: none"><img src='/system/scripts/jquery/themes/main/images/ajax-loader.gif' /></div>
+
+</body>
+</html>

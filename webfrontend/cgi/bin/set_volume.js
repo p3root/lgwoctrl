@@ -22,3 +22,16 @@
 * SOFTWARE.
 *
 */
+
+var lgtv = require('./node_modules/lgtv2/index')({
+    url: 'ws://' + process.argv[2] + ':3000',
+    keyFile: '/opt/loxberry/webfrontend/cgi/plugins/lgwoctrl/clientKey'
+});
+
+lgtv.on('connect', function () {
+	 lgtv.request('ssap://audio/setVolume', {volume: parseInt(process.argv[3])}, function (err, res) {	
+		console.log(res);
+		process.exit();
+    });
+
+});
