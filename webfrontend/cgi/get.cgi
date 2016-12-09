@@ -68,7 +68,7 @@ our $decoded_json;
 our $lat;
 our $long;
 our $numrestotal;
-
+our $prop;
 
 ##########################################################################
 # Read Settings
@@ -112,6 +112,10 @@ $script = param('script');
 $script = quotemeta($script);
 
 
+$prop = param('prop');
+$prop = quotemeta($prop);
+
+
 ##########################################################################
 # Program
 ##########################################################################
@@ -124,7 +128,7 @@ my $lgtvip = $pcfg->param("SETTINGS.IP");
 print $script;
 
 my $scriptpath = "$installdir/webfrontend/cgi/plugins/$psubfolder/bin/$script.js";	
-my $pair_ret_code = system("/usr/bin/node $scriptpath $lgtvip");
+my $pair_ret_code = system("/usr/bin/node $scriptpath $lgtvip $prop");
 
 
 if($pair_ret_code == 0) {

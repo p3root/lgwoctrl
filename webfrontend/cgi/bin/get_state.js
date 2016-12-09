@@ -23,14 +23,15 @@
 *
 */
 
-var lgtv = require('./node_modules/lgtv2/index')({
-    url: 'ws://' + process.argv[2] + ':3000',
-    keyFile: '/opt/loxberry/webfrontend/cgi/plugins/lgwoctrl/clientKey'
-});
+var path = process.argv[1];
+path = path.substring(0, path.lastIndexOf("/"));;	
+var fs = require('fs');
+eval(fs.readFileSync(path + '/base.js')+'');
+
 
 lgtv.on('connect', function () {
         lgtv.request('ssap://audio/getStatus', function (err, res) {
-                console.log(res);
+                analyseResult(res);
                 process.exit();
 
         });
