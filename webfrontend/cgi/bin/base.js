@@ -24,14 +24,27 @@
 */
 
 function analyseResult(res) {
-	if(process.argv[3] != '' && process.argv[3] != undefined) {
-		console.log(res[process.argv[3]]);
+	if(process.argv[4] != '' && process.argv[4] != undefined) {
+		console.log(res[process.argv[4]]);
 		return;
 	}
 	console.log(res);
 }
 
+function printFlat(json) {
+	for (var key in json){
+		var value = json[key];
+		if(typeof value === 'object') 
+			printFlat(value);
+		else
+			console.log(key + "@" + value+"</br>" );
+	}
+}
+
 var lgtv = require('./node_modules/lgtv2/index')({
     url: 'ws://' + process.argv[2] + ':3000',
-    keyFile: '/opt/loxberry/webfrontend/cgi/plugins/lgwoctrl/clientKey'
+    keyFile: '/opt/loxberry/webfrontend/cgi/plugins/lgwoctrl/clientKey',
+	clientKey: process.argv[3]
 });
+
+console.log(lgtv.clientKey);

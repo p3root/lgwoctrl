@@ -29,7 +29,7 @@ eval(fs.readFileSync(path + '/base.js')+'');
 
 
 lgtv.on('connect', function () {
-	 lgtv.request('ssap://system.notifications/createToast', {message: process.argv[3]}, function (err, res) {	
+	 lgtv.request('ssap://system.notifications/createToast', {message: process.argv[4]}, function (err, res) {	
 		analyseResult(res);
 		process.exit();
     });

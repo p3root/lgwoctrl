@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VirtualOut Title="LG WebOS" Comment="" Address="http://root:loxberry123A@192.168.8.16" CmdInit="" CloseAfterSend="true" CmdSep=";">
+	<VirtualOutCmd Title="Channel Down" Comment="" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/admin/plugins/lgwoctrl/set.cgi?script=channel_down" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Channel Up" Comment="" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/admin/plugins/lgwoctrl/set.cgi?script=channel_up" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Volume Up" Comment="" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/admin/plugins/lgwoctrl/set.cgi?script=volume_up" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Volume Down" Comment="" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/admin/plugins/lgwoctrl/set.cgi?script=volume_down" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="Mute" Comment="" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/admin/plugins/lgwoctrl/set.cgi?script=set_mute&amp;value=1" CmdOnHTTP="" CmdOnPost="" CmdOff="http://192.168.8.16//admin/plugins/lgwoctrl/set.cgi?script=set_mute&amp;value=0" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+	<VirtualOutCmd Title="TurnOff" Comment="" CmdOnMethod="GET" CmdOffMethod="GET" CmdOn="/admin/plugins/lgwoctrl/set.cgi?script=turn_off" CmdOnHTTP="" CmdOnPost="" CmdOff="" CmdOffHTTP="" CmdOffPost="" Analog="false" Repeat="0" RepeatRate="0"/>
+</VirtualOut>

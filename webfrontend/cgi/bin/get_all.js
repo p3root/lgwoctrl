@@ -30,9 +30,12 @@ eval(fs.readFileSync(path + '/base.js')+'');
 
 
 lgtv.on('connect', function () {
-	 lgtv.request('ssap://audio/setMute', {mute: parseInt(process.argv[4]) == 1 ? true : false}, function (err, res) {	
-		analyseResult(res);
-		process.exit();
-    });
-
+        lgtv.request('ssap://audio/getStatus', function (err, res) {
+			lgtv.request('ssap://tv/getCurrentChannel', function (err1, res1) {	
+					printFlat(res);					
+					printFlat(res1);
+					process.exit();
+			});
+        });
 });
+

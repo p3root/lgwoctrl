@@ -29,7 +29,7 @@ var fs = require('fs');
 eval(fs.readFileSync(path + '/base.js')+'');
 
 lgtv.on('connect', function () {
-	 lgtv.request('ssap://audio/setVolume', {volume: parseInt(process.argv[3])}, function (err, res) {	
+	 lgtv.request('ssap://audio/setVolume', {volume: parseInt(process.argv[4])}, function (err, res) {	
 		analyseResult(res);
 		process.exit();
     });
